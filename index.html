@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SanjeevRox - YouTube Promotion</title>
+  <meta name="description" content="YouTube channel promotion site - show latest videos, subscribe CTA and social links" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ff3b3b;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#020617 0%, #071029 100%);color:#e6eef8}
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,#ff7a7a,#ff3b3b);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:24px}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .subscribe{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .socials{display:flex;gap:8px;margin-top:8px}
+    .videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:18px}
+    .thumb{background:var(--glass);border-radius:10px;padding:8px}
+    .thumb iframe{width:100%;aspect-ratio:16/9;border-radius:8px;border:0}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    /* Responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr} .card{margin-top:8px}}
+    /* 16:9 thumbnail helper */
+    .thumb .placeholder{width:100%;padding-top:56.25%;background:#0b1228;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">SR</div>
+      <div>
+        <h1>SanjeevRox — Official</h1>
+        <p class="lead">YouTube promotion site — नये वीडियो, सब्सक्राइब बटन और सोशल लिंक एक जगह।</p>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h2>Featured Video</h2>
+          <!-- Replace the VIDEO_ID_HERE with a real YouTube video id -->
+          <div style="margin-top:12px">
+            <div class="thumb">
+              <iframe id="featured" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Featured video" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div>
+              <a class="btn" id="subscribeBtn" href="https://youtube.com/@sanjeevrox1" target="_blank" rel="noopener">Subscribe</a>
+              <div class="socials" style="margin-top:8px">
+                <a href="https://youtube.com/@sanjeevrox1" target="_blank" rel="noopener">YouTube</a>
+                <a href="#" style="opacity:0.7">Instagram</a>
+                <a href="#" style="opacity:0.7">Facebook</a>
+              </div>
+            </div>
+            <div style="color:var(--muted);text-align:right">
+              <div style="font-weight:700">SanjeevRox1</div>
+              <div style="font-size:13px">Creator • हिंदी</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Latest Videos</h3>
+          <p class="lead">नीचे दिए वीडियो 16:9 थम्बनेल्स में दिखाये गए हैं — इन्हें iframe में वीडियो ID डालकर तुरंत दिखाएँ।</p>
+
+          <div class="videos" id="videoGrid">
+            <!-- Example placeholders: replace data-video-id with actual YouTube video IDs -->
+            <div class="thumb">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="video 1" allowfullscreen></iframe>
+            </div>
+            <div class="thumb">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="video 2" allowfullscreen></iframe>
+            </div>
+            <div class="thumb">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="video 3" allowfullscreen></iframe>
+            </div>
+            <div class="thumb">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="video 4" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>About</h3>
+          <p class="lead">यह वेबसाइट आपके YouTube चैनल को promote करने के लिए बनी है। Featured वीडियो और Latest videos सेक्शन को अपने चैनल के वीडियो IDs से बदलें।</p>
+
+          <h4>Quick actions</h4>
+          <ul>
+            <li>Featured video ID बदलें (index.html में "VIDEO_ID_HERE")</li>
+            <li>Video thumbnails 16:9 रखें — CSS में पहले से support है</li>
+            <li>Channel लिंक यह है: <br><a href="https://youtube.com/@sanjeevrox1" target="_blank" rel="noopener">https://youtube.com/@sanjeevrox1</a></li>
+          </ul>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0"/>
+
+          <h4>Hosting (suggested)</h4>
+          <ol style="color:var(--muted);font-size:14px">
+            <li>GitHub Pages — free, easy for single-page sites</li>
+            <li>Netlify — drag & drop or git deploy</li>
+            <li>Vercel — fast CDN deploy</li>
+          </ol>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4>Customize</h4>
+          <p class="lead">मुझे बताइए — मैं रंग, फॉन्ट, featured video, और layout को आपकी मांग के हिसाब से बदल दूँगा।</p>
+          <button onclick="showCustomize()" class="btn" style="width:100%">Customize Now</button>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Made with ❤️ for SanjeevRox — Replace VIDEO_ID_* with real YouTube IDs.
+    </footer>
+  </div>
+
+  <script>
+    function showCustomize(){
+      alert('Aap mujhe bataiye: kaunsa rang/featured video id/kitne videos chahiye — main turant update kar dunga.');
+    }
+
+    // Small helper: replace all placeholder VIDEO_ID_* if user wants automatic replacement via query params
+    (function(){
+      const params = new URLSearchParams(location.search);
+      if(params.get('v')){
+        const vid = params.get('v');
+        document.getElementById('featured').src = 'https://www.youtube.com/embed/' + vid;
+      }
+    })();
+  </script>
+</body>
+</html>
